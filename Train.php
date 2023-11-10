@@ -1,8 +1,8 @@
 <?php
 include_once('Vehicle.php');
-class Car extends Vehicle {
+class Train extends Vehicle {
 	static function makeNoise(){
-		echo "Beep, beep!";
+		echo "Vilciena skaņas";
 	}
 }
 ?>
