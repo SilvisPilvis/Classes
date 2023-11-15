@@ -9,10 +9,10 @@ enum EngineType
     case Combustion;
 }
 
-$myCar = new Car('Nissan', 'Blue', 1999, 198.35, 18, 2.0, EngineType::Combustion);
 echo"<pre>";
+$myCar = new Car('Nissan', 'Blue', 1999, 198.35, 18, 2.0, EngineType::Combustion);
 print_r($myCar);
-// echo $myCar."\n";
+$myCar->getEngineSpecification();
 echo $myCar->move();
 echo"</pre>";
 ?>

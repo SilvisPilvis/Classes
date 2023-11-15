@@ -12,9 +12,10 @@ class Car{
 				$this->propSystem[] = new ElectricMotor(780, "Electricity", 0.9);
 				break;
 			case EngineType::Hybrid:
-				$this->propSystem[] = new ElectricMotor(780, "Electricity", 0.9);
 				$this->propSystem[] = new ICEngine(780, "Gasoline", 0.4);
-                $this->propSystem[1]->setEngineSpecs(2600, 6);
+                $this->propSystem[0]->setEngineSpecs(2600, 6);
+
+				$this->propSystem[] = new ElectricMotor(780, "Electricity", 0.9);
 				break;
 			case EngineType::Combustion:
 				$this->propSystem[] = new ICEngine(780, "Gasoline", 0.4);
@@ -54,5 +55,8 @@ class Car{
 	function makeNoise(){
 		echo "Beep, beep.";
 	}
+    function getEngineSpecification(){
+        $this->propSystem[0]->getEngineSpecs();
+    }
 }
 ?>

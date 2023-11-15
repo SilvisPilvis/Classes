@@ -7,10 +7,9 @@ class ICEngine extends PropulsionSystem{
         $this->displacement = $diaplacement_cc;
         $this->cylinderCount = $cylinders;
     }
-	// function __construct()
-	// {
-	// 	// parent::__construct();
-	// }
+    public function getEngineSpecs(){
+        echo "Displacement: {$this->displacement}cc Cylinders: {$this->cylinderCount}\n";
+    }
 	function work(){
 		echo "Brumm, brumm.";
 	}
